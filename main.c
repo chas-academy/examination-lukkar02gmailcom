@@ -27,9 +27,9 @@ float GetAvarage(int studentTestScores[13])
     return sum / 13.0;
 }
 
-float GetAvarageOfAvarages(int studentAvarages[5])
+float GetAvarageOfAvarages(float studentAvarages[5])
 {
-    int sum = 0;
+    float sum = 0;
 
     for (int i = 0; i < 5; i++)
     {
@@ -38,7 +38,7 @@ float GetAvarageOfAvarages(int studentAvarages[5])
 
     return sum / 5.0;
 }
-void ShowStudentNamesWithHighestAvarage(char studentNames[5][10], int studentAvarages[5])
+void ShowStudentNamesWithHighestAvarage(char studentNames[5][10], float studentAvarages[5])
 {
     char* name = studentNames[0];
 
@@ -52,7 +52,7 @@ void ShowStudentNamesWithHighestAvarage(char studentNames[5][10], int studentAva
     printf("%s\n", name);
 }
 
-void ShowStudentNamesBelowAvarage(char studentNames[5][10], int studentAvarages[5], int avarageOfAvarages)
+void ShowStudentNamesBelowAvarage(char studentNames[5][10], float studentAvarages[5], float avarageOfAvarages)
 {
     for (int i = 0; i < 5; i++)
     {
@@ -67,7 +67,7 @@ int main()
 {
   char studentNames[5][10];
   int studentTestScores[5][13];
-  int studentAvarages[5];
+  float studentAvarages[5];
   
   for (int i = 0; i < 5; i++)
   {
@@ -98,7 +98,7 @@ int main()
 
     ShowStudentNamesWithHighestAvarage(studentNames, studentAvarages);
 
-    int avarageOfAvarages = GetAvarageOfAvarages(studentAvarages);
+    float avarageOfAvarages = GetAvarageOfAvarages(studentAvarages);
     ShowStudentNamesBelowAvarage(studentNames, studentAvarages, avarageOfAvarages);
 
     return 1;
